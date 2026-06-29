@@ -1,14 +1,12 @@
 """
 RAG System for Cameron's AI Assistant
-Uses TF-IDF for retrieval + Claude API for generation
+Uses sentence-transformers for semantic embedding retrieval + Claude API for generation
 """
 
 import os
 import json
-import re
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
 import numpy as np
+from sklearn.metrics.pairwise import cosine_similarity
 
 
 def chunk_text(text, source_name, chunk_size=200, overlap=40):
@@ -18,9 +16,9 @@ def chunk_text(text, source_name, chunk_size=200, overlap=40):
     i = 0
     while i < len(words):
         chunk_words = words[i:i + chunk_size]
-        chunk_text = " ".join(chunk_words)
+        chunk_text_str = " ".join(chunk_words)
         chunks.append({
-            "text": chunk_text,
+            "text": chunk_text_str,
             "source": source_name
         })
         i += chunk_size - overlap
@@ -48,37 +46,38 @@ class RAGSystem:
     def __init__(self, doc_dir="documents"):
         self.doc_dir = doc_dir
         self.chunks = []
-        self.vectorizer = None
-        self.chunk_vectors = None
+        self.embeddings = None
+        self.model = None
+        self._load_model()
         self._build_index()
 
+    def _load_model(self):
+        """Load the sentence transformer model once."""
+        from sentence_transformers import SentenceTransformer
+        self.model = SentenceTransformer("all-MiniLM-L6-v2")
+
     def _build_index(self):
-        """Load documents and build TF-IDF index."""
+        """Load documents and build semantic embedding index."""
         self.chunks = load_documents(self.doc_dir)
         if not self.chunks:
             return
         texts = [c["text"] for c in self.chunks]
-        self.vectorizer = TfidfVectorizer(
-            stop_words="english",
-            ngram_range=(1, 2),
-            max_features=5000
-        )
-        self.chunk_vectors = self.vectorizer.fit_transform(texts)
+        self.embeddings = self.model.encode(texts, show_progress_bar=False)
 
     def refresh(self):
         """Reload documents — call if files change."""
         self._build_index()
 
     def retrieve(self, query, top_k=5):
-        """Return top_k most relevant chunks for the query."""
-        if not self.chunks or self.vectorizer is None:
+        """Return top_k most semantically relevant chunks for the query."""
+        if not self.chunks or self.embeddings is None:
             return []
-        query_vec = self.vectorizer.transform([query])
-        scores = cosine_similarity(query_vec, self.chunk_vectors)[0]
+        query_embedding = self.model.encode([query])
+        scores = cosine_similarity(query_embedding, self.embeddings)[0]
         top_indices = np.argsort(scores)[::-1][:top_k]
         results = []
         for idx in top_indices:
-            if scores[idx] > 0.01:  # relevance threshold
+            if scores[idx] > 0.1:
                 results.append({
                     "text": self.chunks[idx]["text"],
                     "source": self.chunks[idx]["source"],

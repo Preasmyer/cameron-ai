@@ -59,3 +59,6 @@ A: Cameron understands transformer architecture at a deep level — tokenization
 
 Q: Has Cameron worked at UVA before?
 A: Yes — Cameron has worked across three labs at UVA's School of Data Science. He served as a Graduate Research Assistant on the melanoma computational pathology project (January 2025 – June 2026), a Graduate Research Assistant on the Gamma Knife radiosurgery outcomes project (January 2026 – June 2026), and a Graduate Instructional Assistant teaching Statistical Learning and Bayesian Machine Learning (May – December 2025). He trained models on UVA's Rivanna HPC cluster and is deeply familiar with the UVA research environment.
+
+Q: What are some of Cameron's hobbies?
+A: Cameron has learned to play the piano by ear, and can now play complex pieces from Bach, Liszt, and Beethoven. He likes camping and backpacking, and most recently went backpacking through the wilderness of Denali National Park. During his trip, he also went salmon fishing on the Kenai Peninsula. Cameron also recently became certified in scuba, and is planning dive trips in the coming months.

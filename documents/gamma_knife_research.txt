@@ -1,0 +1,71 @@
+PUBLICATION: Computational Analysis of Long-Term Gamma Knife Radiosurgery Outcomes for Vestibular Schwannoma
+
+FIRST AUTHOR: Cameron Preasmyer (ORCID: 0009-0002-4330-1949)
+Affiliation: School of Data Science, University of Virginia, Charlottesville, VA
+Co-authors: Hai Liu, Margaret Lindsay, Maheen Mubashar (UVA Data Science); Jason P. Sheehan MD PhD, David Schlesinger PhD, Yuki Shinya MD PhD (UVA Neurological Surgery); collaborators from UPMC, NYU Langone, Cleveland Clinic, National Hospital for Neurology and Neurosurgery (London, UK), institutions in Italy, Puerto Rico, Turkey, Canada (11 total centers)
+Status: Entering peer review
+
+ABSTRACT
+Long-term outcomes following Gamma Knife radiosurgery (GKRS) for vestibular schwannoma (VS) demonstrate variability. While most patients achieve durable tumor control and functional stability, others experience unfavorable outcomes. This study develops predictive and inferential modeling frameworks to identify patients most likely to achieve favorable long-term outcomes and forecast individualized response trajectories over extended follow-up. Models identified key predictors of favorable outcomes (tumor volume, Koos grade, HB grade, radiation time, hearing class) and transient tumor expansion (cystic component, sex, tumor volume, maximum dose). Current model performance does not support direct clinical implementation, but this work establishes a foundation for future risk stratification in real-world radiosurgical datasets.
+
+BACKGROUND
+Vestibular schwannoma (VS), also called acoustic neuroma, is a benign slow-growing tumor arising from Schwann cells of the vestibular branch of the eighth cranial nerve. It accounts for approximately 10% of all intracranial tumors, frequently presenting with hearing loss, tinnitus, and balance dysfunction. Gamma Knife radiosurgery delivers highly focused radiation in a single session, enabling precise targeting while minimizing exposure to surrounding structures. Despite its efficacy, GKRS may lead to progressive hearing loss, cranial nerve dysfunction, radiation-induced edema, or tumor progression — outcomes that may manifest months to years after treatment.
+
+DATASET
+568 vestibular schwannoma patients who underwent GKRS between 2006 and 2025 at 11 different medical centers under the International Radiosurgery Research Foundation. 55% female (314), 45% male (254). Dataset included 115 columns: 37 parameter (predictor) columns covering pre-treatment patient characteristics, symptoms, and radiosurgery parameters; 78 outcome columns containing post-treatment clinical data.
+
+Four response variables: binary favorable outcome, binary transient expansion, months to unfavorable outcome, months to transient expansion.
+
+PREPROCESSING AND METHODS
+Data Cleaning: Missing values standardized to NaN; removed duplicate columns, columns with >75% missing, uniform-value columns, and facility/patient ID columns. Final curated dataset: 31 predictors across 568 patients. Numerical variables z-score normalized. 80:20 train:test split with stratification.
+
+Special handling: hearing class missing values treated as a clinically distinct category ("Not assessable due to hearing loss") rather than imputed with mode, to avoid biasing patients with severe hearing impairment. Numerical predictor missing values imputed by median.
+
+Statistical Machine Learning Models: Logistic Regression, XGBoost, Random Forest, SVM — trained on either first 20 principal components or original features. Class imbalance addressed with Random Over-Sampling (ROS) and SMOTE. 5-fold cross-validation. F1 score used as primary metric due to class imbalance.
+
+Survival Analysis: Cox Proportional Hazards (CPH) models. Kaplan-Meier analysis. Log-rank tests. Scaled Schoenfeld residual plots to check proportional hazards assumption.
+
+RESULTS
+
+Exploratory Data Analysis:
+- Only 36 patients (6.3%) showed tumor volume progression >25% — severe class imbalance prevented modeling
+- Focused on: favorable outcome occurrence (14.8% unfavorable), transient expansion occurrence (31.5%)
+- Most common unfavorable outcomes: tumor volume increase >25% (38.1%), hydrocephalus (29.8%), vestibulopathy (14.3%)
+- Most unfavorable outcomes occur within first five years post-GKRS
+
+Favorable Outcome Prediction:
+- Best model: logistic regression with elastic net regularization and SMOTE — F1=0.421, recall=0.706, precision=0.300 (all features)
+- After backward elimination: retained tumor volume, Koos grade, HB grade, radiation time
+- Adding hearing class: F1=0.585, with Koos grade, HB grade, and hearing class statistically significant (p<0.05)
+- Logistic regression outperformed more complex models due to limited sample size and dataset noise
+
+Transient Expansion Binary:
+- L1 logistic regression, lasso hyperparameter α=0.7, random undersampling to 1:1 ratio
+- Cross-validation accuracy: 0.61
+- Key predictors: cystic component (β=-0.613), sex (β=-0.261), tumor volume (β=-0.207), maximum dose (β=0.173)
+- Transient expansion less frequent in cystic tumors (20.2%) than non-cystic (34.5%)
+
+Transient Expansion Duration:
+- Best model: random forest and gradient boosted regression
+- Key predictors: time from SRS to transient expansion start, radiation time, tumor volume at SRS
+- Cross-validated Normalized RMSE: 0.96 — weak but informative trend
+- Shorter radiation times and smaller tumor volumes associated with longer transient expansion duration
+
+Survival Analysis:
+- CPH for unfavorable outcome: HB grade and tumor volume significant (p<0.05); hearing class violated proportional hazards assumption, used as stratifying factor
+- Kaplan-Meier: smaller tumors have significantly higher probability of favorable survival (log-rank p<0.001)
+- CPH for transient expansion: hearing class only significant predictor (p<0.05); radiation time stratified; tumor volume alone did not significantly separate groups (log-rank p=0.078)
+- Larger tumors associated with shorter time to unfavorable outcome; dissociation between pseudoprogression and long-term treatment failure reflects different underlying mechanisms
+
+KEY PREDICTORS IDENTIFIED
+Favorable outcome: Tumor Volume, Koos Grade, HB Grade, Radiation Time, Hearing Class
+Transient expansion occurrence: Cystic Component, Sex, Tumor Volume, Maximum Dose
+Transient expansion duration: Time from SRS to expansion start, Radiation Time, Tumor Volume at SRS
+
+CONCLUSIONS
+Integrating clinical, dosimetric, and audiovestibular data within an ML framework identified meaningful predictive signal for long-term GKRS outcomes. Current model performance does not support direct clinical implementation. This work establishes a foundation for future risk stratification tools and demonstrates where predictive signal exists in real-world radiosurgical data.
+
+Future directions: larger prospective multicenter datasets; dosimetric variables (biologically effective dose, cochlear dose, isodose conformity indices); longitudinal imaging and time-series models; external validation; federated learning for multi-institutional collaboration while preserving patient privacy.
+
+SIGNIFICANCE
+This is a first-author publication for Cameron Preasmyer involving a 15+ institution international collaboration, applying machine learning and survival analysis to a clinically important neurosurgical dataset. The work demonstrates Cameron's ability to lead complex, multi-stakeholder research projects, work with messy real-world clinical data, and produce interpretable and clinically relevant AI models.

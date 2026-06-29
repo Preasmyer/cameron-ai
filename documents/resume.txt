@@ -1,0 +1,74 @@
+CAMERON PREASMYER
+M.S. Data Science — University of Virginia School of Data Science
+Email: cpreasy9195@gmail.com | Phone: (661) 445-3240
+Location: Crozet, VA
+GitHub: preasmyer.github.io | LinkedIn: linkedin.com/in/preasmyer
+ORCID: 0009-0002-4330-1949
+
+SUMMARY
+Marine Corps Veteran with a Master of Science in Data Science from the University of Virginia. Highly competent in Machine Learning, Artificial Intelligence, Data Analytics, Statistics and Mathematics. Guided several peer-reviewed research projects at the frontier of modern AI and ML. Skilled in translating technical concepts through graduate-level instructional roles and experienced in driving high-performance teams through years of military leadership. Over 10 years of diverse experience.
+
+EDUCATION
+Master of Science in Data Science
+University of Virginia — School of Data Science | August 2024 – May 2026
+Graduate GPA: 3.95
+
+Bachelor of Science in Business Economics
+University of California, San Diego | September 2021 – September 2023
+Minor: Entrepreneurship & Innovation
+
+TECHNICAL SKILLS
+Data Analysis & Engineering: Data Cleaning & Wrangling, Exploratory Data Analysis, Visualization, Database Design & Query, Algorithmic Complexity & Design, Graph Theory, Data Handling, Cloud Computing, Model Development.
+
+Machine Learning: Bayesian Machine Learning, Statistical Learning, Reinforcement Learning.
+
+Deep Learning: Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Vision Transformers (ViT), Deep Multiple Instance Learning (MIL; Standard & Attention Based), Large Language Models (LLM).
+
+Natural Language Processing (NLP): Text Analytics, Vector Space Modeling, Clustering and Similarity Modeling, Distributional Semantics, Word Embedding, Sentiment Analysis, Document Classification, Language Models.
+
+Programming Languages: Python (Advanced), R (Intermediate-Advanced), SQL (Intermediate), Java (Basic), Stata (Basic).
+
+Python & R Libraries: PyTorch, TensorFlow, Keras, Scikit-Learn, Numpy, Pandas, Matplotlib, Tidymodels, XGBoost, Caret, MASS, kernlab, pROC, probably, doParallel.
+
+Mathematics: Real Analysis, Single & Multivariable Calculus, Differential Equations, Linear Algebra, Discrete Math.
+
+PROFESSIONAL EXPERIENCE
+
+Graduate Research Assistant | UVA School of Data Science & UVA Health | January 2026 – June 2026
+- Performed dimensionality reduction (PCA/UMAP) on 30+ weakly correlated and overlooked predictors to uncover latent structure and cluster phenotypes associated with pseudoprogression risk in Gamma Knife radiosurgery patients.
+- Identified high-signal predictors of pseudoprogression duration via survival-ML integration, enabling downstream clinical interpretations and exposing systematic inconsistencies in pseudoprogression determination.
+- Developed gradient-boosted and survival-aware regression models to estimate pseudoprogression duration, achieving a Normalized RMSE of ~0.97 and revealing stable predictive structure despite high noise and weakly correlated clinical features.
+
+Graduate Research Assistant | UVA School of Data Science | January 2025 – June 2026
+- Built and compared several CNN and ViT architectures using PyTorch to analyze extremely large IHC images to predict metastasis potential in melanoma patients.
+- Enhanced CNN metastasis prediction performance by ~10% through systematic transfer learning ablations, data pipeline optimization, and extraction of softmax-layer representations for downstream logistic-regression classification.
+- Developed an attention-based Deep MIL architecture that expanded image information retention from ~0.0625% to ~6.25% and improved classification accuracy from 89% to 98%, surpassing baseline CNN, ViT, and stacking approaches.
+
+Graduate Instructional Assistant | UVA School of Data Science | May 2025 – December 2025
+- Statistical Learning: Instructed 75 graduate students in regression, classification, clustering, resampling, regularization, tree-based methods, ensembles, boosting, and support vector machines.
+- Bayesian Machine Learning: Instructed 78 graduate students in Bayesian inference, conjugate prior probabilities, naive Bayes classifiers, expectation maximization, Markov chain Monte Carlo, and variational inference.
+
+QA/QC Engineer III | Iconicx Critical Solutions, Manassas, VA | September 2023 – August 2024
+- Led cross-functional coordination, managed engineering teams, and mentored new hires while driving process improvements that delivered on-time, on-budget project execution in a fast-paced technical environment.
+
+Control Systems Specialist | Siemens Smart Infrastructure, Hayward, CA | December 2018 – February 2020
+- Commissioned and validated automated control systems while coordinating with engineers and contractors, troubleshooting networked devices, and delivering clear, customer-facing technical support.
+
+Sergeant (E-5) | United States Marine Corps, San Diego, CA | December 2013 – December 2018
+- Executed global SATCOM operations, trained 300+ personnel, and ensured full accountability and readiness of $3M+ in critical communications equipment.
+
+PROJECT SAMPLES
+
+Reinforcement Learning — Dynamic Traffic Light Optimization | November 2025
+- Built and compared Tabular Q-Learning, Deep Q-Network, and Policy Gradient models on a custom grid of simulated traffic lights.
+URL: preasmyer.github.io/RL1.html
+
+Machine Learning for Disaster Relief | March 2025
+- Applied classical ML techniques to identify makeshift shelters using high-resolution aerial imagery from the 2010 Haiti earthquakes.
+- Invented a unique metric for model selection and reached a 94% TPR and 0.04% FPR despite a ~0.13 target class imbalance.
+URL: preasmyer.github.io/ML1.html
+
+ADDITIONAL SKILLS AND CERTIFICATIONS
+Certifications: CITI IRB-SBS Researcher, QuantGates Introduction to Quantum Computing.
+Extracurriculars: MSDS Student Ambassador, MSDS Student Advisory Board President, Linear Algebra Tutor.
+Additional Skills: Microsoft Office Suite & 365, Linux, Power BI, Tableau, JIRA, ML Ops, Collaboration.

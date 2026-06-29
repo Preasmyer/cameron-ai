@@ -1,0 +1,73 @@
+PUBLICATION: AI-Based Computational Pathology for Metastasis Prediction and Predictor Importance in Melanoma
+
+AUTHORS: Cameron Preasmyer (first author), Minu Choi, Javier Rasero Ph.D
+Affiliation: School of Data Science, University of Virginia, Charlottesville, VA
+Status: Entering peer review
+
+ABSTRACT
+This work presents a multimodal deep learning framework that integrates whole-slide immunohistochemistry (IHC) images with patient-level clinical, histopathological, cytokine, and gene-expression data to predict metastatic progression in melanoma and renal cancer patients, and to quantify the predictive value of individual protein stains. The dataset includes 1,372 IHC images across eight biomarkers (ANX, BCL2, BCL3, BRAF, H&E, MITF, PBP, and PIR), paired with a comprehensive tabular dataset. Feature extraction uses four pretrained architectures: DINOv2 Vision Transformer, Phikon (pathology-specific ViT), ResNet, and DenseNet, each producing fixed-length tile-level embeddings without task-specific fine-tuning. These embeddings are evaluated under a unified Attention-Based Multiple Instance Learning (ABMIL) framework applied across ordered Monte Carlo cross-validation (MCCV) folds, enabling direct comparison of extractor quality under identical training conditions.
+
+DATASET
+The IHC image dataset comprised 1,372 images containing 8 histopathology stains: Annexin (ANX), B-cell lymphoma 2 (BCL2), B-cell lymphoma 3 (BCL3), BRAF, Hematoxylin and Eosin (H&E), Microphthalmia-associated Transcription Factor (MITF), Prohibitin (PBP), and Pirin (PIR). Images derived from male and female patients tested for melanoma and renal cancers, originating outside the continental United States, requiring language translation, extensive data-cleaning, and preprocessing.
+
+Tabular data includes patient-level demographic variables, metastasis status, histopathological features (AJCC stage, Breslow depth, ulceration, mitotic rate), cytokine measurements (GM-CSF, IL-4, IL-6, IL-10, IL-17A, IFN-γ, TGF-β, dermcidin), and gene-expression variables (IHC BRAF status, PIRIN, BCL2, BCL3, PEBP1, MITF, ANX5 expression).
+
+METHODOLOGY
+
+Feature Extraction:
+Whole-slide IHC images exceed one gigapixel in resolution and cannot pass directly through a neural network. Each slide is decomposed into non-overlapping 224x224 pixel tiles at full resolution (level 0). A pretrained feature extractor is applied to each tile with its classifier head removed, transforming raw pixel content into a compact fixed-length embedding vector. All weights are frozen during this process — no task-specific fine-tuning is required. The resulting tile embeddings constitute the instance-level representation of the slide.
+
+Background filtering: tiles where more than 91% of pixels exceed mean channel intensity of 224 are discarded as uninformative background. Retained tiles are normalized using ImageNet channel statistics (mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]).
+
+Feature Extractor Comparison:
+- Phikon (ViT-L): pathology-specific Vision Transformer, 1024-dimensional embeddings
+- DINOv2 ViT-L: large-scale self-supervised ViT trained on diverse imagery, 1024-dimensional embeddings
+- ResNet-50: CNN pretrained on ImageNet, 2048-dimensional embeddings
+- SSL-ResNet-50: self-supervised ResNet, 2048-dimensional embeddings
+- DenseNet-169: CNN pretrained on ImageNet, 1664-dimensional embeddings
+
+Attention-Based Multiple Instance Learning (ABMIL):
+Each slide is treated as a bag of instances (tiles). Only the bag-level metastasis label is available during training — no tile-level annotations required. The ABMIL network learns a scalar attention weight for each tile, producing a weighted aggregation of instance embeddings into a single slide-level representation. This is passed through a classification head to produce a slide-level metastasis prediction.
+
+All feature extractors are evaluated under identical ABMIL training conditions using ordered Monte Carlo cross-validation (MCCV) folds. Fixing the fold structure across extractors ensures observed performance differences are attributable to the extractor rather than split variation.
+
+The attention weights additionally support protein-level importance analysis by treating each IHC stain as a separate bag within a hierarchical MIL structure.
+
+Model Stacking with Tabular Data:
+Slide-level softmax outputs from ABMIL are stacked with patient-level tabular variables to form an enriched feature vector per patient. A secondary classifier is trained on this combined representation using the same MCCV fold structure. Results compared against ABMIL-only to quantify the marginal contribution of tabular data.
+
+Patient-Level Modeling:
+Three progressively richer feature sets were constructed:
+1. IHC-only (7 features): seven median softmax values per patient
+2. IHC + serum (15 features): augmented with eight blood serum cytokine measurements
+3. IHC + serum + histopathology (16 features): augmented with Breslow tumor depth
+
+Six model configurations: SVM and Logistic Regression on each feature set. All models used median imputation, StandardScaler, and class_weight='balanced'. Evaluated via predefined 5-fold cross-validation to maintain consistency with CNN training.
+
+RESULTS
+
+Per-Protein ABMIL Classification (Top Results):
+- Phikon ViT-L: HE accuracy 86.3%, BCL3 84.5%, BCL2 81.5%
+- DINOv2 ViT-L: HE accuracy 80.1%, MITF 79.3%
+- DenseNet-169: HE accuracy 82.5%, BCL2 80.1%
+
+Patient-Level Held-Out Test Performance (32 patients: 15 metastatic, 17 non-metastatic):
+- IHC-only SVM: Test AUC 0.965, Accuracy 84.4%, Recall 1.000, F1 0.857, FN=0
+- IHC-only LogReg: Test AUC 0.961, Accuracy 90.6%, Recall 1.000, F1 0.909, FN=0 (BEST accuracy)
+- IHC + serum LogReg: Test AUC 0.969 (nominally highest), but introduced false negatives
+- IHC-only models achieved perfect sensitivity — zero false negatives for metastatic patients
+- Cross-validated AUC tightly clustered 0.882–0.893 across all six configurations
+
+Feature Importance (SHAP analysis):
+- HE ranked first in every model — absolute weight 1.6–2.9x larger than second-ranked feature
+- BCL3 (NF-κB co-activator) ranked second; PIR ranked third — both with positive coefficients
+- MITF (melanocyte master regulator) received consistently negative weight — consistent with reports of MITF downregulation in invasive melanoma
+- In L1-regularized serum logistic regression, only 4 of 15 features received non-zero coefficients; Dermcidin survived with negative coefficient (β=-0.233)
+
+KEY CONTRIBUTIONS
+- First multimodal pipeline integrating IHC imaging + cytokines + histopathology + gene expression for melanoma metastasis prediction
+- ABMIL expanded image information retention from ~0.0625% to ~6.25% versus downscaling approaches
+- Improved classification accuracy from 89% to 98% over baseline CNN approaches
+- MCCV methodology ensures strict leakage-free, 1:1 model comparisons
+- Attention mechanism enables biologically interpretable protein-level importance ranking
+- Pipeline generalizable to large-scale biomedical and high-resolution imaging domains beyond melanoma

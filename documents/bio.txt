@@ -1,0 +1,36 @@
+PROFESSIONAL BIO — CAMERON PREASMYER
+
+Cameron Preasmyer is an M.S. Data Science candidate at the University of Virginia's School of Data Science (graduating May 2026) with a graduate GPA of 3.95 and approximately ten years of multidisciplinary professional experience. His career spans five years of United States Marine Corps enlisted service (Sergeant, E-5, SATCOM operations), two years as a QA/QC Engineer and Control Systems Specialist in the private sector, one year as a graduate instructional assistant, and active research across three labs at UVA producing two first-author publications currently entering peer review.
+
+RESEARCH PUBLICATIONS (First Author)
+1. "AI-Based Computational Pathology for Metastasis Prediction and Predictor Importance in Melanoma" — Cameron Preasmyer, Minu Choi, Javier Rasero Ph.D — UVA School of Data Science. Applies ABMIL with DINOv2, Phikon, ResNet, and DenseNet feature extractors to 1,372 gigapixel IHC images. Achieved 98% classification accuracy and zero false negatives for metastatic patients on held-out test set. Entering peer review.
+
+2. "Computational Analysis of Long-Term Gamma Knife Radiosurgery Outcomes for Vestibular Schwannoma" — Cameron Preasmyer et al. — UVA School of Data Science & 11 international medical centers. 568-patient dataset from the International Radiosurgery Research Foundation. Applied logistic regression, XGBoost, SVM, Random Forest, and Cox Proportional Hazards survival models. Entering peer review.
+
+TEACHING EXPERIENCE
+Graduate Instructional Assistant at UVA School of Data Science (May–December 2025):
+- Statistical Learning: instructed 75 graduate students
+- Bayesian Machine Learning: instructed 78 graduate students
+Topics: regression, classification, clustering, resampling, regularization, tree-based methods, ensembles, boosting, SVMs, Bayesian inference, MCMC, variational inference.
+
+TECHNICAL STRENGTHS
+Core expertise: Deep learning (CNN, ViT, RNN, ABMIL), computer vision, transfer learning, attention mechanisms, multiple instance learning, feature extraction (DINOv2, Phikon, DenseNet-169, ResNet, SSL-ResNet), PyTorch, scikit-learn.
+
+LLM and NLP expertise: Transformer architecture (attention, tokenization via BPE, embeddings, positional encoding, scaling), fine-tuning paradigms (SFT, LoRA, RLHF, DPO), RAG system design and implementation, LLM evaluation methodologies, hallucination and bias awareness.
+
+HPC: Trained models on UVA's Rivanna cluster with A100 GPUs. Parallelized I/O across CPU cores while models trained on GPU. Handled memory constraints from gigapixel image processing.
+
+WHY CV EXPERIENCE TRANSFERS DIRECTLY TO LLMs
+Cameron's ABMIL work maps directly onto LLM architecture:
+- Image patch decomposition → tokenization
+- DINOv2/DenseNet tile embeddings → token embedding lookup table
+- Gated attention (tanh ⊙ sigmoid) → multi-head self-attention (Q·K·V)
+- Frozen encoder → selective unfreezing is identical to LLM fine-tuning strategy
+- Catastrophic forgetting risk is present and handled in both domains
+- Monte Carlo Cross-Validation rigor parallels LLM evaluation methodology
+
+MILITARY BACKGROUND
+United States Marine Corps, Sergeant E-5, December 2013–December 2018. Executed global SATCOM operations, trained 300+ personnel, and ensured full accountability and readiness of $3M+ in critical communications equipment. The Marine Corps background is a consistent differentiator: mission discipline, leadership under pressure, and team coordination experience across high-stakes environments.
+
+ABOUT THIS DEMO
+This AI assistant is itself a demonstration of Cameron's applied LLM engineering skills. It is a RAG system Cameron built using Flask, TF-IDF retrieval, and the Claude API — his own resume, research manuscripts, and professional bio serve as the knowledge base. The system retrieves the most relevant document chunks for each question and synthesizes an answer using Claude. Cameron built and deployed this specifically for his CMU SEI interview on July 8, 2025, as a live proof of the skills he is interviewing for.

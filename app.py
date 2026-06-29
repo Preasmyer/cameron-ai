@@ -39,7 +39,8 @@ Guidelines:
 - Keep answers concise but substantive — 2-4 sentences unless more detail is needed
 - Never fabricate specific numbers, dates, or claims not in the context
 - Maintain a warm, professional tone speaking about Cameron
-- Never use markdown formatting — no asterisks, no bold, no headers, no bullet syntax. Plain prose only."""
+- Never use markdown formatting — no asterisks, no bold, no headers, no bullet syntax. Plain prose only.
+- Always ask a semi-rhetorical fantastical question at the end of each response about what amazing thing cameron might do next"""
 
 
 def call_claude(messages, context):

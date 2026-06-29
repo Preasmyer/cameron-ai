@@ -1,0 +1,191 @@
+CAMERON PREASMYER — COMPLETE COURSEWORK RECORD
+
+====================================================
+UNIVERSITY OF VIRGINIA — SCHOOL OF DATA SCIENCE
+Master of Science in Data Science | August 2024 – May 2026
+Degree Conferred: May 17, 2026 | Graduate GPA: 3.95
+====================================================
+
+--- 2024 FALL ---
+
+DS 5100 | Programming for Data Science | Grade: A
+Description: Covers programming fundamentals for data science using Python and R. Topics include basic and advanced data structures, algorithms, searching and sorting, greedy algorithms, linear programming, and database basics. Emphasizes software engineering best practices for data science workflows.
+Key topics: Python, R, data structures, algorithms, computational complexity, database fundamentals, data handling pipelines.
+
+STAT 6021 | Linear Models for Data Science | Grade: A-
+Description: Graduate-level course covering the theoretical foundations and applied methods of linear statistical modeling. Covers simple and multiple linear regression, model diagnostics, variable selection, regularization, and generalized linear models including logistic regression.
+Key topics: Linear regression, logistic regression, model diagnostics, variable selection, regularization, inference, model evaluation.
+
+--- 2025 SPRING ---
+
+DS 6001 | Practice and Application of Data Science | Grade: A
+Description: Covers data science practice including communication, exploratory data analysis, and visualization. Selection of algorithms to suit the problem, user needs, and data type. Case studies explore the impact of data science across different domains. Bridges theoretical knowledge and real-world application.
+Key topics: EDA, data visualization, algorithm selection, communication of results, case studies, interdisciplinary applications.
+
+DS 6030 | Statistical Learning | Grade: A+
+Description: Covers fundamentals of data mining and machine learning. Topics include regularization, classification, resampling methods, tree-based methods, ensemble methods, support vector machines, clustering, and dimensionality reduction. Emphasizes both theory and practical application using Python and R.
+Key topics: Regression, classification, resampling, regularization (ridge/lasso), decision trees, random forests, gradient boosting, SVMs, unsupervised learning, model selection, bias-variance tradeoff.
+
+--- 2025 SUMMER ---
+
+DS 5012 | Computation for Data Science | Grade: A
+Description: Covers numerical analysis, optimization, and distributed computing for data science applications. Topics include numerical errors, root-finding algorithms, numerical linear algebra, and large-scale data processing frameworks including Spark, resilient distributed datasets, and cloud computing tools.
+Key topics: Numerical methods, optimization, numerical linear algebra, Spark, distributed computing, AWS, data storage and retrieval at scale.
+
+DS 6040 | Bayesian Machine Learning | Grade: A
+Description: Bayesian inferential methods provide a foundation for machine learning under conditions of uncertainty. Covers major Bayesian ML techniques to effectively address limits to understanding of complex world problems.
+Key topics: Bayesian inference, conjugate prior probabilities, naive Bayes classifiers, expectation maximization (EM), Markov Chain Monte Carlo (MCMC), variational inference, Gaussian processes, probabilistic graphical models.
+
+--- 2025 FALL ---
+
+DS 5004 | Applied Reinforcement Learning | Grade: A
+Description: Graduate course covering reinforcement learning theory and application. Students build and compare multiple RL architectures applied to real-world problems. Cameron applied this course directly to a traffic light optimization project comparing Tabular Q-Learning, Deep Q-Networks (DQN), and Policy Gradient methods.
+Key topics: Markov decision processes, Q-learning, deep Q-networks (DQN), policy gradient methods, reward shaping, temporal difference learning, model-based and model-free RL, exploration vs. exploitation.
+
+DS 6050 | ML III: Deep Learning | Grade: A-
+Description: Graduate-level course on deep learning fundamentals and applications with emphasis on broad applicability across disciplines. Students complete substantive programming assignments implementing core architectures.
+Key topics: Deep neural networks, convolutional neural networks (CNNs), recurrent neural networks (RNNs), LSTMs, transformers, encoder/decoder architectures, generative networks, GANs, regularization, optimization, sequence modeling.
+
+--- 2026 SPRING ---
+
+DS 5001 | Text as Data (Exploratory Text Analytics) | Grade: A
+Description: Application of unsupervised machine learning methods to the linguistic, cultural, and sociological analysis of long-form textual sources. Students engage with digital humanities theory and methods, large digitized text libraries, structured data, relational databases, and linked data. Covers the full pipeline from raw text to interpretable models.
+Key topics: Text preprocessing, tokenization, TF-IDF, word embeddings, topic modeling (LDA), vector space models, clustering, distributional semantics, sentiment analysis, document classification, NLP pipelines.
+
+DS 6002 | Ethics of Big Data I | Grade: A+
+Description: Examines ethical issues arising around big data and provides frameworks, context, concepts, and theories to help students think through and deal with these issues in professional settings. Covers fairness, accountability, transparency, digital rights, harm, bias, discrimination, and regulatory frameworks.
+Key topics: AI ethics, fairness and bias in ML systems, data governance, regulatory frameworks, digital rights, responsible AI, technical debt, data justice, international and multistakeholder agreements.
+
+DS 6015 | Data Science Capstone | Grade: A
+Description: Capstone project course where interdisciplinary teams design, implement, and present an applied data science project for a real client. Teams meet with advisors and clients to advance work. Integrates all skills from the MSDS program into a complete research-to-deployment pipeline.
+Key topics: End-to-end data science project management, client communication, applied ML/AI, team collaboration, presentation of technical results to non-technical stakeholders.
+
+====================================================
+NORTHERN VIRGINIA COMMUNITY COLLEGE (VCCS)
+Non-Curricular Coursework | 2024–2025 | GPA: 4.00
+====================================================
+
+MTH 266 | Linear Algebra | Spring 2024 | Grade: A
+Description: Graduate-preparatory linear algebra covering vector spaces, linear transformations, matrices, determinants, eigenvalues and eigenvectors, and applications. Foundational for machine learning, deep learning, and data science.
+Key topics: Vectors, matrices, linear transformations, systems of linear equations, determinants, eigenvalues and eigenvectors, SVD, projections, null spaces.
+
+MTH 265 | Calculus III | Summer 2025 | Grade: A
+Description: Multivariable calculus covering partial derivatives, multiple integrals, vector calculus, and applications. Essential mathematical foundation for optimization in machine learning and data science.
+Key topics: Partial derivatives, gradient, Hessian, multiple integrals, vector fields, line integrals, surface integrals, Stokes' theorem, divergence theorem.
+
+====================================================
+UNIVERSITY OF CALIFORNIA, SAN DIEGO
+Bachelor of Science in Business Economics | Minor: Entrepreneurship & Innovation
+Earl Warren College | September 2021 – September 2023
+====================================================
+
+MATH 20C | Calculus and Analytic Geometry for Science and Engineering | Fall 2021
+Description: Multivariable calculus covering vectors, partial derivatives, multiple integrals, and vector calculus.
+Key topics: Vectors, partial derivatives, multiple integrals, line integrals.
+
+ECON 100A | Microeconomics A | Fall 2022
+Description: Intermediate microeconomic theory including consumer and producer theory, market structures, and welfare economics.
+
+ECON 110A | Long Run Macroeconomics | Spring 2022
+Description: Macroeconomic theory focused on long-run growth, capital accumulation, and economic development.
+
+ECON 110B | Short Run Macroeconomics | Fall 2022
+Description: Macroeconomic theory focused on short-run fluctuations, business cycles, monetary and fiscal policy.
+
+ECON 100B | Microeconomics B | Winter 2023
+Description: Advanced microeconomic theory including game theory, information economics, and market failures.
+
+ECON 5 | Data Analytics for Social Sciences | Winter 2023
+Description: Introduction to data analysis methods applied to social science research questions. Covers descriptive statistics, regression, and data visualization.
+
+ECON 120A/B | Econometrics A/B | Multiple terms
+Description: Statistical methods for economic data including regression analysis, hypothesis testing, instrumental variables, and time series methods.
+Key topics: OLS regression, hypothesis testing, statistical inference, panel data, time series.
+
+MGT 103 | Product Marketing and Management
+Description: Principles of product management and marketing strategy. Business case analysis and go-to-market strategy.
+
+MGT 121A/B | Innovation to Market A/B
+Description: Two-course sequence covering the process of bringing innovative ideas to market. Business model development, market analysis, and entrepreneurship.
+
+MGT 164 | Business and Organizational Leadership | Grade: A- (excluded per grade filter, included for completeness)
+Description: Organizational behavior and leadership theory. Team dynamics, leadership styles, and organizational change.
+
+MGT 160 | Experiments in Firms | Grade: A
+Description: Experimental and quasi-experimental methods applied to business decisions. A/B testing, causal inference in organizational settings.
+
+MGT 162 | Negotiations | Grade: A-
+Description: Theory and practice of negotiation in business and organizational contexts.
+
+MGT 166 | Corporate Social Responsibility
+Description: Ethical frameworks for corporate decision-making and stakeholder management.
+
+MGT 167 | Social Entrepreneurship
+Description: Business models for social impact, nonprofit and hybrid organizational structures.
+
+MGT 100 | Customer Analytics | Grade: A- (excluded per grade filter)
+Description: Data-driven approaches to understanding customer behavior, segmentation, and lifetime value.
+
+MGT 71 | Business and Operations Management | Grade: A-
+Description: Operations management fundamentals including process design, supply chain, and quality management.
+
+MGT 45 | Principles of Accounting
+Description: Financial and managerial accounting fundamentals including financial statements, cost accounting, and budgeting.
+
+MGT 180 | Business Finance
+Description: Corporate finance theory including time value of money, capital budgeting, risk and return, and cost of capital.
+
+HIUS 108B | History of Native Americans in the US II | Grade: A
+Description: Historical survey of Native American experience in the United States.
+
+====================================================
+COMMUNITY COLLEGE COURSEWORK (Pre-UCSD Transfer)
+Chabot College, College of San Mateo, Canada College, Skyline College
+2019–2021 | Overall Transfer GPA: 4.00
+====================================================
+
+MATH 251 | Calculus/Analytic Geometry I | Grade: A
+Description: Single-variable differential calculus. Limits, derivatives, and applications.
+
+MATH 252 | Calculus/Analytic Geometry II | Grade: A- 
+Description: Single-variable integral calculus. Integration techniques and applications.
+
+MATH 222 | Precalculus
+Description: Algebraic and transcendental functions, trigonometry, and analytic geometry.
+
+ECON 100 | Principles of Macroeconomics | Grade: A-
+Description: Introduction to macroeconomic theory, national income accounting, monetary and fiscal policy.
+
+ECON 102 | Principles of Microeconomics | Grade: A
+Description: Introduction to microeconomic theory, supply and demand, market structures, consumer and producer theory.
+
+BUS 125 | International Business | Grade: A
+Description: Overview of international business environments, global trade, and multinational business strategy.
+
+CIS 254 | Intro Object-Oriented Programming Design | Grade: A
+Description: Introduction to object-oriented programming concepts including classes, objects, inheritance, polymorphism, and encapsulation.
+Key topics: OOP principles, Java/C++ fundamentals, class design, inheritance, data structures basics.
+
+ANTH 125 | Physical Anthropology | Grade: A
+Description: Introduction to biological anthropology, human evolution, and primate behavior.
+
+ASL 100/110 | American Sign Language I & II | Grade: A
+Description: Beginning and intermediate American Sign Language communication skills.
+
+ENGL 1A | Critical Reading and Composition | Grade: A
+Description: Academic reading and writing at the college level.
+
+GEOL 100/101 | Introduction to Geology / Geology Lab | Grade: A
+Description: Physical geology survey course with laboratory component.
+
+HIST 100 | History of Western Civilization I | Grade: A
+Description: Survey of Western history from antiquity through the early modern period.
+
+ART 101 | Ancient, Classical, and Medieval Art History | Grade: A
+Description: Survey of art history from ancient civilizations through the medieval period.
+
+====================================================
+MILITARY CREDIT
+United States Marine Corps | 2013–2018 | 6 Credits
+====================================================
+Cameron received 6 college credits for his military service as a Sergeant (E-5) specializing in SATCOM operations. This service included training in satellite communications systems, leadership, and mission-critical operations management.

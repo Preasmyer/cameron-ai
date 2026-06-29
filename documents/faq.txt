@@ -1,0 +1,61 @@
+FREQUENTLY ASKED QUESTIONS ABOUT CAMERON PREASMYER
+
+Q: What is Cameron's educational background?
+A: Cameron holds a Master of Science in Data Science from the University of Virginia's School of Data Science (GPA 3.95, graduating May 2026) and a Bachelor of Science in Business Economics with a Minor in Entrepreneurship and Innovation from the University of California, San Diego (2021-2023).
+
+Q: What research has Cameron published?
+A: Cameron has two first-author publications entering peer review. The first is "AI-Based Computational Pathology for Metastasis Prediction and Predictor Importance in Melanoma" — a multimodal deep learning framework applying ABMIL to 1,372 gigapixel IHC images, achieving 98% classification accuracy with zero false negatives. The second is "Computational Analysis of Long-Term Gamma Knife Radiosurgery Outcomes for Vestibular Schwannoma" — an ML and survival analysis study of 568 patients across 11 international medical centers.
+
+Q: What is ABMIL and why did Cameron use it?
+A: ABMIL stands for Attention-Based Multiple Instance Learning. Cameron used it because his melanoma research involved gigapixel whole-slide images that are far too large to pass through a standard CNN or ViT directly. ABMIL solves this by decomposing each slide into tiles, extracting embeddings from each tile using a pretrained feature extractor, then using a gated attention mechanism to learn which tiles are diagnostically relevant and aggregate them into a single slide-level prediction. This expanded image information retention from 0.0625% to 100% compared to downscaling approaches.
+
+Q: What makes Cameron a strong candidate for an LLM or ML research role?
+A: Cameron brings a rare combination of deep technical fundamentals, published research experience, HPC infrastructure expertise, and strong communication skills. His computer vision background — particularly attention mechanisms, transfer learning, and embedding-based representations — maps directly onto LLM architecture. He understands backpropagation, fine-tuning tradeoffs, catastrophic forgetting, and evaluation methodology from hands-on experience. His Marine Corps background adds mission discipline and leadership under pressure. He has taught graduate-level ML courses to over 150 students, meaning he can communicate complex concepts clearly — a critical skill in a research environment.
+
+Q: How does Cameron's computer vision experience relate to LLMs?
+A: The architectures are conceptually identical. Image patch decomposition maps to tokenization. DINOv2 and DenseNet tile embeddings map to token embedding lookup tables. ABMIL's gated attention (tanh times sigmoid) maps to multi-head self-attention with query, key, and value matrices. Frozen encoder to selective unfreezing is the exact same fine-tuning strategy used in LLMs. Catastrophic forgetting is a risk in both domains. Monte Carlo Cross-Validation rigor maps to LLM evaluation methodology. Cameron demonstrated this parallel live in his CMU SEI presentation.
+
+Q: What HPC experience does Cameron have?
+A: Cameron trained models on UVA's Rivanna HPC cluster using A100 GPUs. He parallelized I/O processes across CPU cores while models trained on GPU, handling the memory constraints of gigapixel image processing. Training runs took weeks, giving him direct experience with the infrastructure challenges of large-scale model training.
+
+Q: What is Cameron's military background?
+A: Cameron served five years as an enlisted Sergeant (E-5) in the United States Marine Corps from December 2013 to December 2018, specializing in SATCOM operations. He trained over 300 personnel and maintained accountability for $3M+ in critical communications equipment. The Marine Corps background gives him mission discipline, leadership under pressure, and team coordination experience that distinguishes him from candidates with purely academic backgrounds.
+
+Q: What teaching experience does Cameron have?
+A: Cameron served as a Graduate Instructional Assistant at UVA's School of Data Science from May to December 2025, teaching two graduate courses: Statistical Learning (75 students) covering regression, classification, clustering, resampling, regularization, tree-based methods, ensembles, boosting, and SVMs; and Bayesian Machine Learning (78 students) covering Bayesian inference, conjugate priors, naive Bayes, expectation maximization, MCMC, and variational inference.
+
+Q: What deep learning architectures has Cameron worked with?
+A: Cameron has hands-on experience with DenseNet-169, ResNet-50, SSL-ResNet-50, DINOv2 ViT-L, Phikon ViT-L (pathology-specific), standard CNNs, Vision Transformers, RNNs, and ABMIL. He has implemented these in PyTorch for medical imaging applications. He has also implemented a character-level GPT from scratch in PyTorch as part of his LLM self-study.
+
+Q: What does Cameron know about LLMs specifically?
+A: Cameron has studied transformer architecture deeply including tokenization (BPE), embedding tables, positional encoding (RoPE), multi-head self-attention (Q/K/V), feed-forward layers, layer normalization (RMSNorm), and scaling laws. He understands the full post-training pipeline including supervised fine-tuning (SFT), reinforcement learning from human feedback (RLHF), and direct preference optimization (DPO). He knows parameter-efficient methods like LoRA, RAG system design, KV caching, and LLM evaluation. He built this RAG demo as a practical application of that knowledge.
+
+Q: What is this AI assistant demo?
+A: This is a RAG (Retrieval-Augmented Generation) system Cameron built and deployed himself for his CMU SEI interview. It uses Flask as the web framework, TF-IDF for document retrieval, and the Claude API for language generation. Cameron's resume, research manuscripts, and professional bio serve as the knowledge base. When you ask a question, the system retrieves the most relevant document chunks and passes them as context to Claude, which synthesizes an answer. Cameron built and deployed this in a matter of days as a live demonstration of the LLM engineering skills he is interviewing for at UVA's Data Analytics Center — the exact kind of applied LLM work the DAC Research Scientist role requires.
+
+Q: What programming languages and tools does Cameron use?
+A: Cameron is advanced in Python and intermediate-to-advanced in R, with intermediate SQL and basic Java. His Python stack includes PyTorch, TensorFlow, Keras, scikit-learn, NumPy, Pandas, Matplotlib, and Flask. His R stack includes Tidymodels, XGBoost, Caret, MASS, kernlab, pROC, and doParallel. He also uses Linux, Power BI, Tableau, JIRA, and standard ML Ops tooling.
+
+Q: What was Cameron's role in the Gamma Knife research?
+A: Cameron was the first author and lead data scientist on the Gamma Knife vestibular schwannoma study. He worked with a 568-patient dataset from 11 international medical centers under the International Radiosurgery Research Foundation. He built the full ML pipeline including data cleaning, preprocessing, dimensionality reduction (PCA/UMAP), classification models (logistic regression, XGBoost, Random Forest, SVM), and Cox Proportional Hazards survival analysis. He identified tumor volume, Koos grade, HB grade, radiation time, and hearing class as key predictors of favorable outcomes.
+
+Q: What was Cameron's GPA?
+A: Cameron's graduate GPA at UVA's School of Data Science is 3.95.
+
+Q: What are Cameron's career goals?
+A: Cameron is pursuing research scientist and ML engineering roles at the intersection of AI, machine learning, and high-impact domains. He is particularly interested in applied AI research, LLM systems, multimodal learning, and scientifically meaningful applications. He is actively interviewing for a Research Scientist position at UVA's Data Analytics Center within Research Computing, where he would partner with researchers across disciplines to apply LLMs and AI techniques to diverse datasets. He is also interviewing at CMU's Software Engineering Institute Secure AI Lab.
+
+Q: What extracurricular roles has Cameron held at UVA?
+A: Cameron served as an MSDS Student Ambassador, President of the MSDS Student Advisory Board, and a Linear Algebra Tutor. He also holds a CITI IRB-SBS Researcher certification and a QuantGates Introduction to Quantum Computing certification.
+
+Q: What project work has Cameron done outside of research?
+A: Cameron built and compared Tabular Q-Learning, Deep Q-Network, and Policy Gradient models for dynamic traffic light optimization. He also applied classical ML techniques to identify makeshift shelters in high-resolution aerial imagery from the 2010 Haiti earthquakes, inventing a unique model selection metric and achieving 94% TPR with 0.04% FPR despite severe class imbalance. Both projects are publicly available at preasmyer.github.io.
+
+Q: Why is Cameron a good fit for UVA's Data Analytics Center Research Scientist role?
+A: Cameron is a strong fit for the DAC role on multiple dimensions. Technically, he has deep expertise in deep learning, transfer learning, and attention mechanisms that map directly onto LLM work, plus hands-on HPC experience on UVA's own Rivanna cluster with A100 GPUs. His two first-author publications demonstrate he can design rigorous experiments, manage research projects, and produce peer-review-ready outputs — all explicitly required by the role. His Graduate Instructional Assistant experience (153 students across two courses) shows he can develop and deliver training sessions on complex ML topics for diverse audiences, which is a core DAC responsibility. His work across three UVA labs means he already understands the collaborative, interdisciplinary research environment the DAC operates in. Finally, he is a U.S. citizen, meeting the citizenship requirement for access to high-security data environments.
+
+Q: What LLM-specific skills does Cameron bring to the DAC role?
+A: Cameron understands transformer architecture at a deep level — tokenization, embeddings, positional encoding, multi-head self-attention, fine-tuning paradigms (SFT, LoRA, RLHF, DPO), RAG system design, hallucination and bias risks, and responsible AI practices. He built this live RAG demo from scratch using Flask, TF-IDF retrieval, and the Claude API, deploying it on Railway in under a day. He implemented a character-level GPT from scratch in PyTorch during intensive self-study. His CV background with attention mechanisms and embedding-based representations gives him strong conceptual foundations for applied LLM work across research domains.
+
+Q: Has Cameron worked at UVA before?
+A: Yes — Cameron has worked across three labs at UVA's School of Data Science. He served as a Graduate Research Assistant on the melanoma computational pathology project (January 2025 – June 2026), a Graduate Research Assistant on the Gamma Knife radiosurgery outcomes project (January 2026 – June 2026), and a Graduate Instructional Assistant teaching Statistical Learning and Bayesian Machine Learning (May – December 2025). He trained models on UVA's Rivanna HPC cluster and is deeply familiar with the UVA research environment.

@@ -9,7 +9,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 
-def chunk_text(text, source_name, chunk_size=200, overlap=40):
+def chunk_text(text, source_name, chunk_size=100, overlap=25):
     words = text.split()
     chunks = []
     i = 0
@@ -61,7 +61,7 @@ class RAGSystem:
     def refresh(self):
         self._build_index()
 
-    def retrieve(self, query, top_k=5):
+    def retrieve(self, query, top_k=7):
         if not self.chunks or self.vectorizer is None:
             return []
         query_vec = self.vectorizer.transform([query])
@@ -77,7 +77,7 @@ class RAGSystem:
                 })
         return results
 
-    def build_context(self, query, top_k=5):
+    def build_context(self, query, top_k=7):
         results = self.retrieve(query, top_k=top_k)
         if not results:
             return "No specific documents found for this query."
